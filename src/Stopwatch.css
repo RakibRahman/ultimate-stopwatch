@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  width: 400px;
+  display: grid;
+  place-items: center;
+  gap: 0.5rem;
+  margin: 150px auto;
+}
+.title {
+  color: #2ecc71;
+}
+.watch {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+button {
+  width: 80px;
+  border: 0;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+}
+#toggleBtn {
+  background: #2ecc71;
+}
+#resetBtn {
+  background: #f14e0d;
+}
