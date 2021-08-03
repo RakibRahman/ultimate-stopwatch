@@ -1,27 +1,30 @@
 import React, { useState, useEffect } from "react";
 import "./Stopwatch.css";
 import Tick from "./tick.mp3";
+
 const Stopwatch = (_) => {
   const [timer, setTimer] = useState(0);
   const [counter, setCounter] = useState(true);
-  const TickTock = new Audio(Tick);
+
   useEffect(() => (document.title = "Ultimate Stopwatch"));
+
   useEffect(() => {
     let interval = null;
+    const sound = new Audio(Tick);
     if (!counter) {
       interval = setInterval(() => {
         setTimer((t) => t + 1);
       }, 1000);
-      TickTock.play();
-      TickTock.loop = true;
+      sound.play();
     }
     return () => {
       clearInterval(interval);
-      TickTock.pause();
+      sound.pause();
     };
   }, [counter]);
 
   const formattedTime = new Date(timer * 1000).toISOString().substr(11, 8);
+
   const toggleStopwatch = (_) => {
     setCounter((e) => !e);
     const btn = document.querySelector("#toggleBtn");
