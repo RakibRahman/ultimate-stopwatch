@@ -11,6 +11,7 @@ const Stopwatch = (_) => {
   useEffect(() => {
     let interval = null;
     const sound = new Audio(Tick);
+    sound.loop = true;
     if (!counter) {
       interval = setInterval(() => {
         setTimer((t) => t + 1);
