@@ -13,6 +13,7 @@
 .title {
   color: #2ecc71;
   font-size: 2.5rem;
+  text-align: center;
 }
 .watch {
   font-size: 25px;
@@ -33,4 +34,9 @@ button {
 }
 #resetBtn {
   background: #f14e0d;
+}
+@media screen and(max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
 }
